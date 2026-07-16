@@ -3,7 +3,6 @@
 
 # 👑 SHAAB____JI FACEBOOK CLONE TOOL
 # 🔥 POWERED BY TRF - THE REAL FORCE
-# 💀 NO KEY REQUIRED - FREE FOR ALL
 
 import os
 import re
@@ -37,7 +36,7 @@ from requests.exceptions import ConnectionError, Timeout, RequestException
 requests.urllib3.disable_warnings()
 
 # ============================================
-# 🔑 KEY SYSTEM - SHAAB____JI KEYS
+# 🔑 KEY SYSTEM
 # ============================================
 
 VALID_KEYS = [
@@ -49,7 +48,6 @@ VALID_KEYS = [
 ]
 
 def verify_key():
-    """Simple key verification system"""
     print("\033[1;36m" + "═" * 50)
     user_key = input("\n\033[1;37m[?] Enter your key: ").strip().upper()
     
@@ -65,23 +63,6 @@ def verify_key():
         else:
             print("\n\033[1;31m[!] Exiting...")
             sys.exit(1)
-
-# ============================================
-# 🚀 SCRIPT START
-# ============================================
-
-print("""
-\033[1;32m
-╔════════════════════════════════════════════════════════╗
-║  👑 SHAAB____JI FACEBOOK CLONE TOOL 👑               ║
-║  🔥 POWERED BY TRF - THE REAL FORCE                  ║
-║  💀 ENTER KEY TO UNLOCK THE BEAST                   ║
-╚════════════════════════════════════════════════════════╝
-\033[0m
-""")
-
-if not verify_key():
-    sys.exit(1)
 
 # ============================================
 # ANTI-TAMPERING CHECKS
@@ -121,9 +102,7 @@ CYAN = '\x1b[38;5;51m'
 PURPLE = '\x1b[38;5;129m'
 GOLD = '\x1b[38;5;214m'
 PINK = '\x1b[38;5;206m'
-RED = '\x1b[38;5;196m'
 
-# Global variables
 method = []
 oks = []
 cps = []
@@ -139,7 +118,6 @@ def __shaab__banner__():
     else:
         os.system('clear')
     
-    # New Background with cool design
     print(f"""{PURPLE}
     ╔══════════════════════════════════════════════════════════════╗
     ║  ███████╗██╗  ██╗ █████╗  █████╗ ██████╗                     ║
@@ -149,7 +127,7 @@ def __shaab__banner__():
     ║  ███████║██║  ██║██║  ██║██║  ██║██████╔╝                    ║
     ║  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝                     ║
     ╚══════════════════════════════════════════════════════════════╝
-    {CYAN}   ███████╗██╗  ██╗ █████╗  █████╗ ██████╗                 
+    {CYAN}   ███████╗██╗  ██╗ █████╗  █████╗ ██████║                 
     {CYAN}   ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗                
     {CYAN}   ███████╗███████║███████║███████║██████╔╝                
     {CYAN}   ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗                
@@ -245,7 +223,6 @@ def window1():
 
 def BNG_71_():
     __shaab__banner__()
-    # Menu now uses numbers 1,2,3 instead of A,B,C
     print(f'       {rad}({W}1{rad}) {W}{G}OLD ACCOUNT CLONE TOOL')
     linex()
     print(f'       {rad}({W}2{rad}) {W}{G}RECENT ACCOUNT TOOL')
@@ -254,13 +231,13 @@ def BNG_71_():
     linex()
     choice = input(f"       {rad}CHOICE {W}: {Y}").strip()
     
-    if choice in ('1', '01', '1'):
+    if choice in ('1', '01'):
         old_clone()
-    elif choice in ('2', '02', '2'):
+    elif choice in ('2', '02'):
         print(f"\n    {Y}[!] Coming soon...")
         time.sleep(2)
         BNG_71_()
-    elif choice in ('3', '03', '3'):
+    elif choice in ('3', '03'):
         print(f"\n    {Y}[!] Coming soon...")
         time.sleep(2)
         BNG_71_()
@@ -271,7 +248,6 @@ def BNG_71_():
 
 def old_clone():
     __shaab__banner__()
-    # Sub-menu also uses numbers
     print(f'       {rad}({W}1{rad}) {W}{G}ALL SERIES (2010-2014)')
     linex()
     print(f'       {rad}({W}2{rad}) {W}{G}100003/4 SERIES')
@@ -280,11 +256,11 @@ def old_clone():
     linex()
     choice = input(f"       {rad}CHOICE {W}: {Y}").strip()
     
-    if choice in ('1', '01', '1'):
+    if choice in ('1', '01'):
         old_One()
-    elif choice in ('2', '02', '2'):
+    elif choice in ('2', '02'):
         old_Tow()
-    elif choice in ('3', '03', '3'):
+    elif choice in ('3', '03'):
         old_Tree()
     else:
         print(f"\n    {rad}[!] Invalid option!")
@@ -306,7 +282,6 @@ def old_One():
         uid = str(random.randint(1000000000, 1999999999 if ask == '1' else 4999999999))
         user_list.append(uid)
     
-    # Method selection also numbers
     print(f'       {rad}({W}1{rad}) {W}{G}METHOD 1')
     print(f'       {rad}({W}2{rad}) {W}{G}METHOD 2')
     linex()
@@ -510,6 +485,10 @@ def login_2(uid):
 if __name__ == "__main__":
     try:
         sys.stdout.write('\x1b]2;👑 SHAAB____JI TRF TOOL 👑 \x07')
+        # Key verification first
+        if not verify_key():
+            sys.exit(1)
+        # After verification, show banner and menu
         BNG_71_()
     except KeyboardInterrupt:
         print(f"\n\n{rad}[!] Process interrupted by user")
