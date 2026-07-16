@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 🔓 SHAAB____JI TOOL - COMPLETE FREE VERSION
-# NO KEY REQUIRED - DIRECT ACCESS
+# 👑 SHAAB____JI FACEBOOK CLONE TOOL
+# 🔥 POWERED BY TRF - THE REAL FORCE
+# 💀 NO KEY REQUIRED - FREE FOR ALL
 
 import os
 import re
@@ -36,25 +37,56 @@ from requests.exceptions import ConnectionError, Timeout, RequestException
 requests.urllib3.disable_warnings()
 
 # ============================================
-# 🔓 FREE VERSION - NO KEYS REQUIRED
+# 🔑 KEY SYSTEM - SHAAB____JI KEYS
+# ============================================
+
+VALID_KEYS = [
+    "SHAAB-TRF-2026",
+    "SHAAB-KING-007",
+    "TRF-INDIA-001",
+    "SHAAB-786-TRF",
+    "TRF-ROCKS-999"
+]
+
+def verify_key():
+    """Simple key verification system"""
+    print("\033[1;36m" + "═" * 50)
+    user_key = input("\n\033[1;37m[?] Enter your key: ").strip().upper()
+    
+    if user_key in VALID_KEYS:
+        print("\n\033[1;32m[✓] ✅ Key Verified! Welcome SHAAB____JI!\n")
+        return True
+    else:
+        print("\n\033[1;31m[×] ❌ Invalid Key! Try again.\n")
+        print("\033[1;33m💡 Valid keys: SHAAB-TRF-2026, SHAAB-KING-007, TRF-INDIA-001")
+        retry = input("\n[?] Try again? (y/n): ").strip().lower()
+        if retry == 'y':
+            return verify_key()
+        else:
+            print("\n\033[1;31m[!] Exiting...")
+            sys.exit(1)
+
+# ============================================
+# 🚀 SCRIPT START
 # ============================================
 
 print("""
 \033[1;32m
-╔═══════════════════════════════════════════╗
-║  🔓 SHAAB____JI TOOL - FREE VERSION 🔓  ║
-║  ✅ NO KEY REQUIRED                      ║
-║  ✅ DIRECT ACCESS                       ║
-║  ✅ FULL FEATURES                       ║
-╚═══════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════╗
+║  👑 SHAAB____JI FACEBOOK CLONE TOOL 👑               ║
+║  🔥 POWERED BY TRF - THE REAL FORCE                  ║
+║  💀 ENTER KEY TO UNLOCK THE BEAST                   ║
+╚════════════════════════════════════════════════════════╝
 \033[0m
 """)
 
+if not verify_key():
+    sys.exit(1)
+
 # ============================================
-# MAIN TOOL CODE
+# ANTI-TAMPERING CHECKS
 # ============================================
 
-# Anti-tampering checks
 try:
     import requests.api as api
     import requests.models as models
@@ -72,7 +104,10 @@ try:
 except Exception as e:
     print(f"\033[1;33m[!] Security check: {e}")
 
-# Color codes
+# ============================================
+# COLOR CODES
+# ============================================
+
 X = '\x1b[1;37m'
 rad = '\x1b[38;5;196m'
 G = '\x1b[38;5;46m'
@@ -83,6 +118,10 @@ GS = '\x1b[38;5;40m'
 W = '\x1b[1;37m'
 BLUE = '\x1b[38;5;39m'
 CYAN = '\x1b[38;5;51m'
+PURPLE = '\x1b[38;5;129m'
+GOLD = '\x1b[38;5;214m'
+PINK = '\x1b[38;5;206m'
+RED = '\x1b[38;5;196m'
 
 # Global variables
 method = []
@@ -92,7 +131,7 @@ loop = 0
 user = []
 
 def linex():
-    print(f'{BLUE}═══════════════════════════════════════════════════════')
+    print(f'{GOLD}═══════════════════════════════════════════════════════')
 
 def __shaab__banner__():
     if os.name == 'nt':
@@ -100,23 +139,32 @@ def __shaab__banner__():
     else:
         os.system('clear')
     
-    print(f"""{G}
-    ╔═══════════════════════════════════════════╗
-    ║  ███████╗██╗  ██╗ █████╗  █████╗ ██████╗ ║
-    ║  ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗║
-    ║  ███████╗███████║███████║███████║██████╔╝║
-    ║  ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗║
-    ║  ███████║██║  ██║██║  ██║██║  ██║██████╔╝║
-    ║  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ║
-    ╚═══════════════════════════════════════════╝
+    # New Background with cool design
+    print(f"""{PURPLE}
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  ███████╗██╗  ██╗ █████╗  █████╗ ██████╗                     ║
+    ║  ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗                    ║
+    ║  ███████╗███████║███████║███████║██████╔╝                    ║
+    ║  ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗                    ║
+    ║  ███████║██║  ██║██║  ██║██║  ██║██████╔╝                    ║
+    ║  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝                     ║
+    ╚══════════════════════════════════════════════════════════════╝
+    {CYAN}   ███████╗██╗  ██╗ █████╗  █████╗ ██████╗                 
+    {CYAN}   ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗                
+    {CYAN}   ███████╗███████║███████║███████║██████╔╝                
+    {CYAN}   ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗                
+    {CYAN}   ███████║██║  ██║██║  ██║██║  ██║██████╔╝                
+    {CYAN}   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝                 
+    {GOLD}   ═══════════════════════════════════════════════════════════
     {Y}   👑 𝐒𝐇𝐀𝐀𝐁____𝐉𝐈 𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐂𝐋𝐎𝐍𝐄𝐑 👑
-    {BLUE}   ═══════════════════════════════════
+    {BLUE}   ═══════════════════════════════════════════════════════════
     {G}   [+] OWNER    : SHAAB____JI 👑
-    {Y}   [+] STATUS   : FREE VERSION 🔓
-    {Y}   [+] VERSION  : 3.0 ULTIMATE FREE
-    {BLUE}   ═══════════════════════════════════
-    {PP}   💀 𝐅𝐔𝐂𝐊𝐄𝐃 𝐁𝐘 𝐃𝐀𝐑𝐊𝐒𝐓𝐀𝐑 𝐁𝐎𝐈𝐈 𝐒𝐀𝐇𝐈𝐋 💀
-    {G}   ═══════════════════════════════════
+    {PURPLE}   [+] TEAM     : TRF - THE REAL FORCE 🔥
+    {G}   [+] STATUS   : KEY UNLOCKED ✅
+    {Y}   [+] VERSION  : 4.0 ULTIMATE
+    {BLUE}   ═══════════════════════════════════════════════════════════
+    {PINK}   💀 "𝐓𝐑𝐅 𝐊𝐀 𝐁𝐀𝐀𝐃𝐒𝐇𝐀𝐇 𝐒𝐈𝐑𝐅 𝐒𝐇𝐀𝐀𝐁____𝐉𝐈" 💀
+    {GOLD}   ═══════════════════════════════════════════════════════════
     """)
 
 def creationyear(uid):
@@ -197,21 +245,22 @@ def window1():
 
 def BNG_71_():
     __shaab__banner__()
-    print(f'       {rad}({W}A{rad}) {W}{G}OLD ACCOUNT CLONE TOOL')
+    # Menu now uses numbers 1,2,3 instead of A,B,C
+    print(f'       {rad}({W}1{rad}) {W}{G}OLD ACCOUNT CLONE TOOL')
     linex()
-    print(f'       {rad}({W}B{rad}) {W}{G}RECENT ACCOUNT TOOL')
+    print(f'       {rad}({W}2{rad}) {W}{G}RECENT ACCOUNT TOOL')
     linex()
-    print(f'       {rad}({W}C{rad}) {W}{G}INFORMATION TOOL')
+    print(f'       {rad}({W}3{rad}) {W}{G}INFORMATION TOOL')
     linex()
-    choice = input(f"       {rad}CHOICE {W}: {Y}").strip().upper()
+    choice = input(f"       {rad}CHOICE {W}: {Y}").strip()
     
-    if choice in ('A', '01', '1'):
+    if choice in ('1', '01', '1'):
         old_clone()
-    elif choice in ('B', '02', '2'):
+    elif choice in ('2', '02', '2'):
         print(f"\n    {Y}[!] Coming soon...")
         time.sleep(2)
         BNG_71_()
-    elif choice in ('C', '03', '3'):
+    elif choice in ('3', '03', '3'):
         print(f"\n    {Y}[!] Coming soon...")
         time.sleep(2)
         BNG_71_()
@@ -222,19 +271,20 @@ def BNG_71_():
 
 def old_clone():
     __shaab__banner__()
-    print(f'       {rad}({W}A{rad}) {W}{G}ALL SERIES (2010-2014)')
+    # Sub-menu also uses numbers
+    print(f'       {rad}({W}1{rad}) {W}{G}ALL SERIES (2010-2014)')
     linex()
-    print(f'       {rad}({W}B{rad}) {W}{G}100003/4 SERIES')
+    print(f'       {rad}({W}2{rad}) {W}{G}100003/4 SERIES')
     linex()
-    print(f'       {rad}({W}C{rad}) {W}{G}2009 SERIES')
+    print(f'       {rad}({W}3{rad}) {W}{G}2009 SERIES')
     linex()
-    choice = input(f"       {rad}CHOICE {W}: {Y}").strip().upper()
+    choice = input(f"       {rad}CHOICE {W}: {Y}").strip()
     
-    if choice in ('A', '01', '1'):
+    if choice in ('1', '01', '1'):
         old_One()
-    elif choice in ('B', '02', '2'):
+    elif choice in ('2', '02', '2'):
         old_Tow()
-    elif choice in ('C', '03', '3'):
+    elif choice in ('3', '03', '3'):
         old_Tree()
     else:
         print(f"\n    {rad}[!] Invalid option!")
@@ -256,10 +306,11 @@ def old_One():
         uid = str(random.randint(1000000000, 1999999999 if ask == '1' else 4999999999))
         user_list.append(uid)
     
-    print(f'       {rad}({W}A{rad}) {W}{G}METHOD 1')
-    print(f'       {rad}({W}B{rad}) {W}{G}METHOD 2')
+    # Method selection also numbers
+    print(f'       {rad}({W}1{rad}) {W}{G}METHOD 1')
+    print(f'       {rad}({W}2{rad}) {W}{G}METHOD 2')
     linex()
-    meth = input(f"       {rad}CHOICE {W}(A/B): {Y}").strip().upper()
+    meth = input(f"       {rad}CHOICE {W}(1/2): {Y}").strip()
     
     with tred(max_workers=30) as pool:
         __shaab__banner__()
@@ -268,9 +319,9 @@ def old_One():
         linex()
         
         for uid in user_list:
-            if meth == 'A':
+            if meth == '1':
                 pool.submit(login_1, uid)
-            elif meth == 'B':
+            elif meth == '2':
                 pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD!")
@@ -293,10 +344,10 @@ def old_Tow():
         suffix = ''.join(random.choices('0123456789', k=9))
         user_list.append(prefix + suffix)
     
-    print(f'       {rad}({W}A{rad}) {W}{G}METHOD 1')
-    print(f'       {rad}({W}B{rad}) {W}{G}METHOD 2')
+    print(f'       {rad}({W}1{rad}) {W}{G}METHOD 1')
+    print(f'       {rad}({W}2{rad}) {W}{G}METHOD 2')
     linex()
-    meth = input(f"       {rad}CHOICE {W}(A/B): {Y}").strip().upper()
+    meth = input(f"       {rad}CHOICE {W}(1/2): {Y}").strip()
     
     with tred(max_workers=30) as pool:
         __shaab__banner__()
@@ -305,9 +356,9 @@ def old_Tow():
         linex()
         
         for uid in user_list:
-            if meth == 'A':
+            if meth == '1':
                 pool.submit(login_1, uid)
-            elif meth == 'B':
+            elif meth == '2':
                 pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD!")
@@ -329,10 +380,10 @@ def old_Tree():
         suffix = ''.join(random.choices('0123456789', k=8))
         user_list.append(prefix + suffix)
     
-    print(f'       {rad}({W}A{rad}) {W}{G}METHOD 1')
-    print(f'       {rad}({W}B{rad}) {W}{G}METHOD 2')
+    print(f'       {rad}({W}1{rad}) {W}{G}METHOD 1')
+    print(f'       {rad}({W}2{rad}) {W}{G}METHOD 2')
     linex()
-    meth = input(f"       {rad}CHOICE {W}(A/B): {Y}").strip().upper()
+    meth = input(f"       {rad}CHOICE {W}(1/2): {Y}").strip()
     
     with tred(max_workers=30) as pool:
         __shaab__banner__()
@@ -341,9 +392,9 @@ def old_Tree():
         linex()
         
         for uid in user_list:
-            if meth == 'A':
+            if meth == '1':
                 pool.submit(login_1, uid)
-            elif meth == 'B':
+            elif meth == '2':
                 pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD!")
@@ -458,12 +509,14 @@ def login_2(uid):
 
 if __name__ == "__main__":
     try:
-        sys.stdout.write('\x1b]2;👑 SHAAB____JI FREE TOOL 👑 \x07')
+        sys.stdout.write('\x1b]2;👑 SHAAB____JI TRF TOOL 👑 \x07')
         BNG_71_()
     except KeyboardInterrupt:
         print(f"\n\n{rad}[!] Process interrupted by user")
-        print(f"{Y}Thanks for using SHAAB____JI FREE Tools!")
+        print(f"{Y}👑 SHAAB____JI says: 'TRF ka baadshah sirf SHAAB____JI'")
+        print(f"{PURPLE}🔥 TRF - THE REAL FORCE 🔥")
         sys.exit(0)
     except Exception as e:
         print(f"\n{rad}[!] Error: {e}")
+        print(f"{Y}👑 SHAAB____JI is here to help!")
         sys.exit(1)
